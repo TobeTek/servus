@@ -21,6 +21,7 @@ jobs:
         source $HOME/.poetry/env
         poetry add --dev pylint
         poetry install
+        poetry shell
     - name: Analysing the code with pylint
       run: |
-        poetry run pylint $(git ls-files '*.py')
+        pylint $(git ls-files '*.py')
