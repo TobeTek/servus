@@ -3,7 +3,9 @@
 
 # Servus
 
-[![PyPI version](https://badge.fury.io/py/servus.svg)](https://badge.fury.io/py/servus) [![PyPI license](https://img.shields.io/pypi/l/servus)](https://pypi.org/project/servus/1.0.0/)
+[![PyPI version](https://badge.fury.io/py/servus.svg)](https://badge.fury.io/py/servus)
+[![PyPI license](https://img.shields.io/pypi/l/servus)](https://pypi.org/project/servus/1.0.0/)
+[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
 
 <br>
 A wrapper for the aiohttp library for making asynchronous web requests in Python.
@@ -19,11 +21,11 @@ import asyncio
 async def main():
 	# Create a new session
 	my_session = servus.ClientSession()
-	
-	# Use Servus to send a request. 
+
+	# Use Servus to send a request.
 	# Servus automatically parses and serializes the response, and returns a ready to use object
 	response = await servus.get(my_session, "http://httpbin.org")
-	
+
 	print(response.response) # (aiohttp.ClientResponse )
 	print(response.json) # (dict)
 
@@ -33,7 +35,7 @@ async def main():
 asyncio.run(main())
 ```
 
-`servus` also has inbuilt support for working with Discord bots. 
+`servus` also has inbuilt support for working with Discord bots.
 
 Example Usage:
 ```py

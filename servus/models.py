@@ -1,5 +1,7 @@
-from typing import Dict, AnyStr
-from dataclasses import dataclass
+"""Data objects for Responses and Response Wrappers"""
+from dataclasses import dataclass, field
+from typing import AnyStr, Dict
+
 from aiohttp import ClientResponse
 
 
@@ -11,4 +13,5 @@ class AioHttpResponseWrapper:
     data: AnyStr
     txt: AnyStr
 
-    json: Dict = {}
+    # Default of an empty dictionary
+    json: Dict = field(default_factory=dict())

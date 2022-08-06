@@ -1,4 +1,3 @@
-from collections import defaultdict
 from json import JSONDecodeError
 
 import aiohttp
@@ -24,7 +23,7 @@ async def parse_response(resp: aiohttp.ClientResponse):
         Wrapped response that provides synchronous access response properties
     """
     # Create data with default values
-    data = defaultdict(dict)
+    data = dict.fromkeys(["json", "response", "txt", "data"])
 
     data["response"] = resp
     try:
