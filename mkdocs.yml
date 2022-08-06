@@ -1,0 +1,6 @@
+site_name: Servus
+site_url: https://tobetek.github.io/servus
+
+nav:
+    - Home: index.md
+    - About: about.md
