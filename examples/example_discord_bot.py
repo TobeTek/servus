@@ -13,6 +13,7 @@ MY_TOKEN = "<YOUR_TOKEN>"
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("!"))
 
+
 @bot.event
 async def on_ready():
     """On ready event!"""
@@ -57,6 +58,7 @@ async def slap(ctx, user: discord.Member = None):
             ctx.author.mention, user.mention
         )
     await ctx.send(message)
+
 
 # Add the createRequestClient coroutine to `bot` async loop
 bot.loop.create_task(servus.discord_utils.createRequestsClient(bot))

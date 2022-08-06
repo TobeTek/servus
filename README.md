@@ -18,17 +18,17 @@ import asyncio
 
 async def main():
 	# Create a new session
-	mySession = servus.ClientSession()
+	my_session = servus.ClientSession()
 	
 	# Use Servus to send a request. 
 	# Servus automatically parses and serializes the response, and returns a ready to use object
-	response = await servus.get(mySession, "http://httpbin.org")
+	response = await servus.get(my_session, "http://httpbin.org")
 	
 	print(response.response) # (aiohttp.ClientResponse )
 	print(response.json) # (dict)
 
 	# Remeber to close the session!
-	mySession.close()
+	my_session.close()
 
 asyncio.run(main())
 ```

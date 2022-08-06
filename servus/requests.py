@@ -14,13 +14,13 @@ async def get(session: ClientSession, url: str, **params):
     Parameters
     ----------
     session : ClientSession
-        aiohttp ClientSession used to make requests     
+        aiohttp ClientSession used to make requests
     url : str
         The URL endpoint
 
     Returns
     -------
-    AioHttpResponseWrapper 
+    AioHttpResponseWrapper
         Final Response returned by the function.
     """
     async with session.get(url, **params) as resp:
@@ -34,13 +34,13 @@ async def post(session: ClientSession, url, **params):
     Parameters
     ----------
     session : ClientSession
-        aiohttp ClientSession used to make requests     
+        aiohttp ClientSession used to make requests
     url : str
         The URL endpoint
 
     Returns
     -------
-    AioHttpResponseWrapper 
+    AioHttpResponseWrapper
         Final Response returned by the function.
     """
     async with session.post(url, **params) as resp:
@@ -54,13 +54,13 @@ async def put(session: ClientSession, url, **params):
     Parameters
     ----------
     session : ClientSession
-        aiohttp ClientSession used to make requests     
+        aiohttp ClientSession used to make requests
     url : str
         The URL endpoint
 
     Returns
     -------
-    AioHttpResponseWrapper 
+    AioHttpResponseWrapper
         Final Response returned by the function.
     """
     async with session.put(url, **params) as resp:
@@ -74,13 +74,13 @@ async def patch(session: ClientSession, url, **params):
     Parameters
     ----------
     session : ClientSession
-        aiohttp ClientSession used to make requests     
+        aiohttp ClientSession used to make requests
     url : str
         The URL endpoint
 
     Returns
     -------
-    AioHttpResponseWrapper 
+    AioHttpResponseWrapper
         Final Response returned by the function.
     """
     async with session.patch(url, **params) as resp:
@@ -94,13 +94,13 @@ async def delete(session: ClientSession, url, **params):
     Parameters
     ----------
     session : ClientSession
-        aiohttp ClientSession used to make requests     
+        aiohttp ClientSession used to make requests
     url : str
         The URL endpoint
 
     Returns
     -------
-    AioHttpResponseWrapper 
+    AioHttpResponseWrapper
         Final Response returned by the function.
     """
     async with session.delete(url, **params) as resp:
