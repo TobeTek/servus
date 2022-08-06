@@ -1,9 +1,17 @@
-from collections import namedtuple
+"""Data objects for Responses and Response Wrappers"""
+from dataclasses import dataclass, field
+from typing import AnyStr, Dict
 
-# AioHttpResponseWrapper Object fields/properties
-RESPONSE_PROPS = ["response", "json", "data", "txt"]
+from aiohttp import ClientResponse
 
-# Response Model used for Serializing Response objects
-AioHttpResponseWrapper = namedtuple(
-    "AioHttpResponseWrapper", RESPONSE_PROPS, defaults={"json": {}}
-)
+
+@dataclass
+class AioHttpResponseWrapper:
+    """Response Model used for Serializing Response objects"""
+
+    response: ClientResponse
+    data: AnyStr
+    txt: AnyStr
+
+    # Default of an empty dictionary
+    json: Dict = field(default_factory=dict())

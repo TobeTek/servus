@@ -1,12 +1,13 @@
 import asyncio
-import servus
+
 import aiohttp
+import pytest
+
+import servus
 
 
-async def main():
+@pytest.mark.asyncio
+async def test_client_get():
     session = aiohttp.ClientSession()
     r = await servus.get(session, "https://reqres.in/api/users?page=2")
-    print(type(r.json))
-
-
-asyncio.run(main())
+    assert type(r.json) == dict, f"{r.json} is not a dict"

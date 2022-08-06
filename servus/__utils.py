@@ -1,10 +1,16 @@
+from json import JSONDecodeError
+
 import aiohttp
-from .models import AioHttpResponseWrapper, RESPONSE_PROPS
-import json
+
+from .models import AioHttpResponseWrapper
 
 
-async def parseResponse(resp: aiohttp.ClientResponse):
-    """Extract response object properties so they can be accessed synchronously e.g JSON, text and Binary data fields
+async def parse_response(resp: aiohttp.ClientResponse):
+    """
+    Parse ClientResponse
+
+    Extract response object properties so they can be accessed synchronously
+    e.g JSON, text and Binary data fields
 
     Parameters
     ----------
@@ -16,22 +22,26 @@ async def parseResponse(resp: aiohttp.ClientResponse):
     AioHttpResponseWrapper
         Wrapped response that provides synchronous access response properties
     """
-
     # Create data with default values
-    data = dict().fromkeys(RESPONSE_PROPS, {})
+    data = dict.fromkeys(["json", "response", "txt", "data"])
 
     data["response"] = resp
     try:
         data["json"] = await resp.json()
-    except:
+
+    except JSONDecodeError:
+        # No JSON was returned
         pass
+
     try:
         data["txt"] = await resp.txt()
-    except:
+
+    except Exception:
         pass
+
     try:
         data["data"] = await resp.data()
-    except:
+    except Exception:
         pass
 
     # Create a new ResponseWrapper and pass in extracted values

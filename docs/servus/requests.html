@@ -94,7 +94,7 @@
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 
 
@@ -114,7 +114,7 @@
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 
 
@@ -134,7 +134,7 @@
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 
 
@@ -154,7 +154,7 @@
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 
 
@@ -174,7 +174,7 @@
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 </pre></div>
 
@@ -184,7 +184,7 @@
                 <section id="get">
                             <div class="attr function"><a class="headerlink" href="#get">#&nbsp;&nbsp</a>
 
-        
+
             <span class="def">async def</span>
             <span class="name">get</span><span class="signature">(session: aiohttp.client.ClientSession, url: str, **params)</span>:
     </div>
@@ -207,7 +207,7 @@
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 </pre></div>
 
@@ -224,7 +224,7 @@ url : str
 
 <h2 id="returns">Returns</h2>
 
-<p>AioHttpResponseWrapper 
+<p>AioHttpResponseWrapper
     Final Response returned by the function.</p>
 </div>
 
@@ -233,7 +233,7 @@ url : str
                 <section id="post">
                             <div class="attr function"><a class="headerlink" href="#post">#&nbsp;&nbsp</a>
 
-        
+
             <span class="def">async def</span>
             <span class="name">post</span><span class="signature">(session: aiohttp.client.ClientSession, url, **params)</span>:
     </div>
@@ -256,7 +256,7 @@ url : str
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 </pre></div>
 
@@ -273,7 +273,7 @@ url : str
 
 <h2 id="returns">Returns</h2>
 
-<p>AioHttpResponseWrapper 
+<p>AioHttpResponseWrapper
     Final Response returned by the function.</p>
 </div>
 
@@ -282,7 +282,7 @@ url : str
                 <section id="put">
                             <div class="attr function"><a class="headerlink" href="#put">#&nbsp;&nbsp</a>
 
-        
+
             <span class="def">async def</span>
             <span class="name">put</span><span class="signature">(session: aiohttp.client.ClientSession, url, **params)</span>:
     </div>
@@ -305,7 +305,7 @@ url : str
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 </pre></div>
 
@@ -322,7 +322,7 @@ url : str
 
 <h2 id="returns">Returns</h2>
 
-<p>AioHttpResponseWrapper 
+<p>AioHttpResponseWrapper
     Final Response returned by the function.</p>
 </div>
 
@@ -331,7 +331,7 @@ url : str
                 <section id="patch">
                             <div class="attr function"><a class="headerlink" href="#patch">#&nbsp;&nbsp</a>
 
-        
+
             <span class="def">async def</span>
             <span class="name">patch</span><span class="signature">(session: aiohttp.client.ClientSession, url, **params)</span>:
     </div>
@@ -354,7 +354,7 @@ url : str
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 </pre></div>
 
@@ -371,7 +371,7 @@ url : str
 
 <h2 id="returns">Returns</h2>
 
-<p>AioHttpResponseWrapper 
+<p>AioHttpResponseWrapper
     Final Response returned by the function.</p>
 </div>
 
@@ -380,7 +380,7 @@ url : str
                 <section id="delete">
                             <div class="attr function"><a class="headerlink" href="#delete">#&nbsp;&nbsp</a>
 
-        
+
             <span class="def">async def</span>
             <span class="name">delete</span><span class="signature">(session: aiohttp.client.ClientSession, url, **params)</span>:
     </div>
@@ -403,7 +403,7 @@ url : str
 <span class="sd">        Final Response returned by the function.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
-        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parseResponse</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+        <span class="n">fresp</span> <span class="o">=</span> <span class="k">await</span> <span class="n">_utils</span><span class="o">.</span><span class="n">parse_response</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fresp</span>
 </pre></div>
 
@@ -420,7 +420,7 @@ url : str
 
 <h2 id="returns">Returns</h2>
 
-<p>AioHttpResponseWrapper 
+<p>AioHttpResponseWrapper
     Final Response returned by the function.</p>
 </div>
 
