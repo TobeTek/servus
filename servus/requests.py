@@ -1,15 +1,19 @@
-"""A module that exposes HTTP verbs/requests to end users 
+"""
+HTTP Requests API
+
+A module that exposes HTTP verbs/requests to end users
 
 TODO: Implement HEAD and OPTIONS methods
 """
 
 from aiohttp import ClientSession
+
 from . import __utils as _utils
-from .models import RESPONSE_PROPS, AioHttpResponseWrapper
 
 
 async def get(session: ClientSession, url: str, **params):
-    """Sends an asynchronous GET request
+    """
+    Send an asynchronous GET request
 
     Parameters
     ----------
@@ -29,7 +33,8 @@ async def get(session: ClientSession, url: str, **params):
 
 
 async def post(session: ClientSession, url, **params):
-    """Sends an asynchronous POST request
+    """
+    Send an asynchronous POST request
 
     Parameters
     ----------
@@ -49,7 +54,8 @@ async def post(session: ClientSession, url, **params):
 
 
 async def put(session: ClientSession, url, **params):
-    """Sends an asynchronous PUT request
+    """
+    Send an asynchronous PUT request
 
     Parameters
     ----------
@@ -69,7 +75,8 @@ async def put(session: ClientSession, url, **params):
 
 
 async def patch(session: ClientSession, url, **params):
-    """Sends an asynchronous PATCH request
+    """
+    Send an asynchronous PATCH request
 
     Parameters
     ----------
@@ -89,7 +96,8 @@ async def patch(session: ClientSession, url, **params):
 
 
 async def delete(session: ClientSession, url, **params):
-    """Sends an asynchronous DELETE request
+    """
+    Send an asynchronous DELETE request
 
     Parameters
     ----------

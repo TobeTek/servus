@@ -1,12 +1,13 @@
-"""An example of a discord bot that makes use of `servus` to make asynchronous web requests
-    `bot.session` holds the Client session that the bot makes use of throughout its lifecycle
+# flake8: noqa
+"""
+An example of a discord bot that makes use of `servus` to make asynchronous web requests
+`bot.session` holds the Client session that the bot makes use of throughout its lifecycle
+
 """
 
-import aiohttp
-import servus
 import discord
 from discord.ext import commands
-import asyncio
+
 import servus
 
 MY_TOKEN = "<YOUR_TOKEN>"
