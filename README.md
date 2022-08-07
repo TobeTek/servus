@@ -24,10 +24,10 @@ async def main():
 
 	# Use Servus to send a request.
 	# Servus automatically parses and serializes the response, and returns a ready to use object
-	response = await servus.get(my_session, "http://httpbin.org")
+	response = await servus.get(my_session, "http://httpbin.org/get")
 
-	print(response.response) # (aiohttp.ClientResponse )
 	print(response.json) # (dict)
+	print(response.response) # (aiohttp.ClientResponse)
 
 	# Remeber to close the session!
 	my_session.close()
@@ -43,7 +43,7 @@ import discord
 from discord.ext import commands
 import asyncio
 import servus
-from servus.discord_utils import createRequestsClient
+from servus.discord_utils import create_requests_client
 
 MY_TOKEN = "<YOUR_TOKEN>"
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("!"))
@@ -57,7 +57,7 @@ async  def hello(ctx):
 	await ctx.send(f"World! {data}")
 
 # Add the createRequestClient coroutine to `bot` async loop
-bot.loop.create_task(createRequestsClient(bot))
+bot.loop.create_task(create_requests_client(bot))
 
 # Run the bot
 bot.run(MY_TOKEN)
