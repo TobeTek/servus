@@ -10,8 +10,8 @@ class AioHttpResponseWrapper:
     """Response Model used for Serializing Response objects"""
 
     response: ClientResponse
-    data: AnyStr
-    txt: AnyStr
+    data: AnyStr = ""
+    txt: AnyStr = ""
 
     # Default of an empty dictionary
-    json: Dict = field(default_factory=dict())
+    json: Dict = field(default_factory=dict)
