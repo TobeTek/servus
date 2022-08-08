@@ -23,7 +23,6 @@ classifiers = [
 python = "^3.10"
 aiohttp = ">=3.6.0,<3.8.0"
 "discord.py" = {version="^1.7.3", optional=true}
-coverage = "^6.4.3"
 
 
 [tool.poetry.dev-dependencies]
@@ -37,6 +36,7 @@ pre-commit = "^2.20.0"
 pytest-asyncio = "^0.19.0"
 Werkzeug = "2.0.3"
 pytest-cov = "^3.0.0"
+coverage = "^6.4.3"
 
 [tool.poetry.extras]
 discord = ["discord.py"]
