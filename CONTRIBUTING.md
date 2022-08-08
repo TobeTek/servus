@@ -8,6 +8,10 @@ install `servus` dependencies using
 ```bash
 poetry install
 ```
+OR if you'd like to work on the discord utilities
+```bash
+poetry install -E discord
+```
 
 This project also makes use of [`pre-commit`]() to ensure code quality. Install `pre-commit` hooks using
 
