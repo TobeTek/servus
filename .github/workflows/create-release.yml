@@ -1,4 +1,5 @@
----
+# Create a new release of servus whenever a tag with a name v* is pushed.
+# TODO: Switch event to run on merge
 name: "tagged-release"
 
 on:
