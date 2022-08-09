@@ -1,5 +1,3 @@
-from json import JSONDecodeError
-
 import aiohttp
 
 from .models import AioHttpResponseWrapper
@@ -23,13 +21,13 @@ async def parse_response(resp: aiohttp.ClientResponse):
         Wrapped response that provides synchronous access response properties
     """
     # Create data with default values
-    data = dict.fromkeys(["json", "response", "txt", "data"])
+    data = dict()
 
     data["response"] = resp
     try:
         data["json"] = await resp.json()
 
-    except JSONDecodeError:
+    except Exception:
         # No JSON was returned
         pass
 

@@ -17,4 +17,4 @@ async def close_client(client: aiohttp.ClientSession):
     aioclient : aiohttp.ClientSession
         Client Session to close
     """
-    client.close()
+    await client.close()
